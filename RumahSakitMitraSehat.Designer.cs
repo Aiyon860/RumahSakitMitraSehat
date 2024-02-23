@@ -32,8 +32,8 @@
         {
             this.MasterData = new System.Windows.Forms.GroupBox();
             this.DataDokter = new System.Windows.Forms.Button();
-            this.dataPasien = new System.Windows.Forms.Button();
             this.DataObat = new System.Windows.Forms.Button();
+            this.dataPasien = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.DataPemeriksaanCheckUp = new System.Windows.Forms.GroupBox();
             this.DataCheckup = new System.Windows.Forms.Button();
@@ -47,6 +47,7 @@
             this.MasterData.Controls.Add(this.DataDokter);
             this.MasterData.Controls.Add(this.DataObat);
             this.MasterData.Controls.Add(this.dataPasien);
+            this.MasterData.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MasterData.Location = new System.Drawing.Point(28, 28);
             this.MasterData.Name = "MasterData";
             this.MasterData.Size = new System.Drawing.Size(552, 80);
@@ -64,16 +65,6 @@
             this.DataDokter.UseVisualStyleBackColor = true;
             this.DataDokter.Click += new System.EventHandler(this.DataDokter_Click);
             // 
-            // dataPasien
-            // 
-            this.dataPasien.Location = new System.Drawing.Point(18, 34);
-            this.dataPasien.Name = "dataPasien";
-            this.dataPasien.Size = new System.Drawing.Size(108, 27);
-            this.dataPasien.TabIndex = 0;
-            this.dataPasien.Text = "Data Pasien";
-            this.dataPasien.UseVisualStyleBackColor = true;
-            this.dataPasien.Click += new System.EventHandler(this.DataPasien_Click);
-            // 
             // DataObat
             // 
             this.DataObat.Location = new System.Drawing.Point(304, 34);
@@ -83,6 +74,17 @@
             this.DataObat.Text = "Data Obat";
             this.DataObat.UseVisualStyleBackColor = true;
             this.DataObat.Click += new System.EventHandler(this.DataObat_Click);
+            // 
+            // dataPasien
+            // 
+            this.dataPasien.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataPasien.Location = new System.Drawing.Point(18, 34);
+            this.dataPasien.Name = "dataPasien";
+            this.dataPasien.Size = new System.Drawing.Size(108, 27);
+            this.dataPasien.TabIndex = 0;
+            this.dataPasien.Text = "Data Pasien";
+            this.dataPasien.UseVisualStyleBackColor = true;
+            this.dataPasien.Click += new System.EventHandler(this.DataPasien_Click);
             // 
             // Exit
             // 
@@ -109,7 +111,7 @@
             // 
             this.DataCheckup.Location = new System.Drawing.Point(18, 34);
             this.DataCheckup.Name = "DataCheckup";
-            this.DataCheckup.Size = new System.Drawing.Size(108, 29);
+            this.DataCheckup.Size = new System.Drawing.Size(120, 29);
             this.DataCheckup.TabIndex = 0;
             this.DataCheckup.Text = "Data Checkup";
             this.DataCheckup.UseVisualStyleBackColor = true;

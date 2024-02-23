@@ -28,146 +28,149 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.HapusButton = new System.Windows.Forms.Button();
+            this.EditButton = new System.Windows.Forms.Button();
+            this.FilterObatDataGridView = new System.Windows.Forms.DataGridView();
+            this.FilterObatTextBox = new System.Windows.Forms.TextBox();
+            this.SimpanButton = new System.Windows.Forms.Button();
+            this.HargaLabel = new System.Windows.Forms.Label();
+            this.KuantitasTextBox = new System.Windows.Forms.TextBox();
+            this.KuantitasLabel = new System.Windows.Forms.Label();
+            this.IndikasiTextBox = new System.Windows.Forms.TextBox();
+            this.IndikasiLabel = new System.Windows.Forms.Label();
+            this.NamaObatTextBox = new System.Windows.Forms.TextBox();
+            this.NamaObatLabel = new System.Windows.Forms.Label();
+            this.KembaliButton = new System.Windows.Forms.Button();
+            this.HargaNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.FilterObatDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HargaNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
-            // button4
+            // HapusButton
             // 
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(754, 352);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(78, 27);
-            this.button4.TabIndex = 37;
-            this.button4.Text = "Hapus";
-            this.button4.UseVisualStyleBackColor = true;
+            this.HapusButton.ForeColor = System.Drawing.Color.Black;
+            this.HapusButton.Location = new System.Drawing.Point(754, 352);
+            this.HapusButton.Name = "HapusButton";
+            this.HapusButton.Size = new System.Drawing.Size(78, 27);
+            this.HapusButton.TabIndex = 37;
+            this.HapusButton.Text = "Delete";
+            this.HapusButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // EditButton
             // 
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(672, 352);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(76, 27);
-            this.button3.TabIndex = 36;
-            this.button3.Text = "Edit";
-            this.button3.UseVisualStyleBackColor = true;
+            this.EditButton.ForeColor = System.Drawing.Color.Black;
+            this.EditButton.Location = new System.Drawing.Point(672, 352);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(76, 27);
+            this.EditButton.TabIndex = 36;
+            this.EditButton.Text = "Edit";
+            this.EditButton.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // FilterObatDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(453, 67);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(379, 270);
-            this.dataGridView1.TabIndex = 35;
+            this.FilterObatDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FilterObatDataGridView.Location = new System.Drawing.Point(453, 67);
+            this.FilterObatDataGridView.Name = "FilterObatDataGridView";
+            this.FilterObatDataGridView.RowHeadersWidth = 51;
+            this.FilterObatDataGridView.RowTemplate.Height = 24;
+            this.FilterObatDataGridView.Size = new System.Drawing.Size(379, 270);
+            this.FilterObatDataGridView.TabIndex = 35;
             // 
-            // textBox5
+            // FilterObatTextBox
             // 
-            this.textBox5.AccessibleName = "";
-            this.textBox5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox5.Location = new System.Drawing.Point(453, 354);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(150, 22);
-            this.textBox5.TabIndex = 34;
-            this.textBox5.Text = "Filter Obat";
+            this.FilterObatTextBox.AccessibleName = "";
+            this.FilterObatTextBox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.FilterObatTextBox.Location = new System.Drawing.Point(453, 354);
+            this.FilterObatTextBox.Name = "FilterObatTextBox";
+            this.FilterObatTextBox.Size = new System.Drawing.Size(150, 22);
+            this.FilterObatTextBox.TabIndex = 34;
+            this.FilterObatTextBox.Text = "Filter Obat";
+            this.FilterObatTextBox.GotFocus += new System.EventHandler(this.FilterObatTextBox_OnFocus);
+            this.FilterObatTextBox.LostFocus += new System.EventHandler(this.FilterObatTextBox_LoseFocus);
             // 
-            // button2
+            // SimpanButton
             // 
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(166, 225);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 33);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Simpan";
-            this.button2.UseVisualStyleBackColor = true;
+            this.SimpanButton.ForeColor = System.Drawing.Color.Black;
+            this.SimpanButton.Location = new System.Drawing.Point(166, 225);
+            this.SimpanButton.Name = "SimpanButton";
+            this.SimpanButton.Size = new System.Drawing.Size(132, 33);
+            this.SimpanButton.TabIndex = 33;
+            this.SimpanButton.Text = "Simpan";
+            this.SimpanButton.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // HargaLabel
             // 
-            this.textBox4.Location = new System.Drawing.Point(166, 173);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(242, 22);
-            this.textBox4.TabIndex = 29;
+            this.HargaLabel.AutoSize = true;
+            this.HargaLabel.Location = new System.Drawing.Point(26, 173);
+            this.HargaLabel.Name = "HargaLabel";
+            this.HargaLabel.Size = new System.Drawing.Size(45, 16);
+            this.HargaLabel.TabIndex = 28;
+            this.HargaLabel.Text = "Harga";
             // 
-            // label5
+            // KuantitasTextBox
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 173);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 16);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "Harga";
+            this.KuantitasTextBox.Location = new System.Drawing.Point(166, 136);
+            this.KuantitasTextBox.Name = "KuantitasTextBox";
+            this.KuantitasTextBox.Size = new System.Drawing.Size(242, 22);
+            this.KuantitasTextBox.TabIndex = 25;
             // 
-            // textBox3
+            // KuantitasLabel
             // 
-            this.textBox3.Location = new System.Drawing.Point(166, 136);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(242, 22);
-            this.textBox3.TabIndex = 25;
+            this.KuantitasLabel.AutoSize = true;
+            this.KuantitasLabel.Location = new System.Drawing.Point(26, 136);
+            this.KuantitasLabel.Name = "KuantitasLabel";
+            this.KuantitasLabel.Size = new System.Drawing.Size(61, 16);
+            this.KuantitasLabel.TabIndex = 24;
+            this.KuantitasLabel.Text = "Kuantitas";
             // 
-            // label3
+            // IndikasiTextBox
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 136);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 16);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Kuantitas";
+            this.IndikasiTextBox.Location = new System.Drawing.Point(166, 101);
+            this.IndikasiTextBox.Name = "IndikasiTextBox";
+            this.IndikasiTextBox.Size = new System.Drawing.Size(242, 22);
+            this.IndikasiTextBox.TabIndex = 23;
             // 
-            // textBox2
+            // IndikasiLabel
             // 
-            this.textBox2.Location = new System.Drawing.Point(166, 101);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(242, 22);
-            this.textBox2.TabIndex = 23;
+            this.IndikasiLabel.AutoSize = true;
+            this.IndikasiLabel.Location = new System.Drawing.Point(26, 101);
+            this.IndikasiLabel.Name = "IndikasiLabel";
+            this.IndikasiLabel.Size = new System.Drawing.Size(53, 16);
+            this.IndikasiLabel.TabIndex = 22;
+            this.IndikasiLabel.Text = "Indikasi";
             // 
-            // label2
+            // NamaObatTextBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 16);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Indikasi";
+            this.NamaObatTextBox.Location = new System.Drawing.Point(166, 67);
+            this.NamaObatTextBox.Name = "NamaObatTextBox";
+            this.NamaObatTextBox.Size = new System.Drawing.Size(242, 22);
+            this.NamaObatTextBox.TabIndex = 21;
             // 
-            // textBox1
+            // NamaObatLabel
             // 
-            this.textBox1.Location = new System.Drawing.Point(166, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(242, 22);
-            this.textBox1.TabIndex = 21;
+            this.NamaObatLabel.AutoSize = true;
+            this.NamaObatLabel.Location = new System.Drawing.Point(26, 67);
+            this.NamaObatLabel.Name = "NamaObatLabel";
+            this.NamaObatLabel.Size = new System.Drawing.Size(76, 16);
+            this.NamaObatLabel.TabIndex = 20;
+            this.NamaObatLabel.Text = "Nama Obat";
             // 
-            // label1
+            // KembaliButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 16);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Nama Obat";
+            this.KembaliButton.Location = new System.Drawing.Point(24, 23);
+            this.KembaliButton.Name = "KembaliButton";
+            this.KembaliButton.Size = new System.Drawing.Size(107, 29);
+            this.KembaliButton.TabIndex = 19;
+            this.KembaliButton.Text = "<< Kembali";
+            this.KembaliButton.UseVisualStyleBackColor = true;
+            this.KembaliButton.Click += new System.EventHandler(this.KembaliButton_Click);
             // 
-            // button1
+            // HargaNumericUpDown
             // 
-            this.button1.Location = new System.Drawing.Point(24, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 29);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "<< Kembali";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.HargaNumericUpDown.Location = new System.Drawing.Point(166, 173);
+            this.HargaNumericUpDown.Name = "HargaNumericUpDown";
+            this.HargaNumericUpDown.Size = new System.Drawing.Size(242, 22);
+            this.HargaNumericUpDown.TabIndex = 38;
             // 
             // FormDataObat
             // 
@@ -176,24 +179,26 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(878, 520);
             this.ControlBox = false;
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.HargaNumericUpDown);
+            this.Controls.Add(this.HapusButton);
+            this.Controls.Add(this.EditButton);
+            this.Controls.Add(this.FilterObatDataGridView);
+            this.Controls.Add(this.FilterObatTextBox);
+            this.Controls.Add(this.SimpanButton);
+            this.Controls.Add(this.HargaLabel);
+            this.Controls.Add(this.KuantitasTextBox);
+            this.Controls.Add(this.KuantitasLabel);
+            this.Controls.Add(this.IndikasiTextBox);
+            this.Controls.Add(this.IndikasiLabel);
+            this.Controls.Add(this.NamaObatTextBox);
+            this.Controls.Add(this.NamaObatLabel);
+            this.Controls.Add(this.KembaliButton);
             this.Name = "FormDataObat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form Data Obat";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormDataObat_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.FilterObatDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HargaNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,19 +206,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button HapusButton;
+        private System.Windows.Forms.Button EditButton;
+        private System.Windows.Forms.DataGridView FilterObatDataGridView;
+        private System.Windows.Forms.TextBox FilterObatTextBox;
+        private System.Windows.Forms.Button SimpanButton;
+        private System.Windows.Forms.Label HargaLabel;
+        private System.Windows.Forms.TextBox KuantitasTextBox;
+        private System.Windows.Forms.Label KuantitasLabel;
+        private System.Windows.Forms.TextBox IndikasiTextBox;
+        private System.Windows.Forms.Label IndikasiLabel;
+        private System.Windows.Forms.TextBox NamaObatTextBox;
+        private System.Windows.Forms.Label NamaObatLabel;
+        private System.Windows.Forms.Button KembaliButton;
+        private System.Windows.Forms.NumericUpDown HargaNumericUpDown;
     }
 }

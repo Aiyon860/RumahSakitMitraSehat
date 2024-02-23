@@ -28,199 +28,201 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.KembaliButton = new System.Windows.Forms.Button();
+            this.NamaLengkap = new System.Windows.Forms.Label();
+            this.NamaLengkapTextBox = new System.Windows.Forms.TextBox();
+            this.NIKTextBox = new System.Windows.Forms.TextBox();
+            this.NIK = new System.Windows.Forms.Label();
+            this.TempatLahirTextBox = new System.Windows.Forms.TextBox();
+            this.TempatLahir = new System.Windows.Forms.Label();
+            this.TanggalLahir = new System.Windows.Forms.Label();
+            this.TanggalLahirDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.PekerjaanTextBox = new System.Windows.Forms.TextBox();
+            this.Pekerjaan = new System.Windows.Forms.Label();
+            this.JenisKelamin = new System.Windows.Forms.Label();
+            this.LakiLakiRadioButton = new System.Windows.Forms.RadioButton();
+            this.PerempuanRadioButton = new System.Windows.Forms.RadioButton();
+            this.SimpanDataPasien = new System.Windows.Forms.Button();
+            this.CariDataPasienTextBox = new System.Windows.Forms.TextBox();
+            this.ShowDataPasienDataGridView = new System.Windows.Forms.DataGridView();
+            this.EditButton = new System.Windows.Forms.Button();
+            this.HapusButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.ShowDataPasienDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // KembaliButton
             // 
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(24, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 29);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "<< Kembali";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.KembaliButton.ForeColor = System.Drawing.Color.Black;
+            this.KembaliButton.Location = new System.Drawing.Point(24, 23);
+            this.KembaliButton.Name = "KembaliButton";
+            this.KembaliButton.Size = new System.Drawing.Size(107, 29);
+            this.KembaliButton.TabIndex = 0;
+            this.KembaliButton.Text = "<< Kembali";
+            this.KembaliButton.UseVisualStyleBackColor = true;
+            this.KembaliButton.Click += new System.EventHandler(this.KembaliButton_Click);
             // 
-            // label1
+            // NamaLengkap
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nama Lengkap";
+            this.NamaLengkap.AutoSize = true;
+            this.NamaLengkap.Location = new System.Drawing.Point(26, 67);
+            this.NamaLengkap.Name = "NamaLengkap";
+            this.NamaLengkap.Size = new System.Drawing.Size(100, 16);
+            this.NamaLengkap.TabIndex = 1;
+            this.NamaLengkap.Text = "Nama Lengkap";
             // 
-            // textBox1
+            // NamaLengkapTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(166, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(242, 22);
-            this.textBox1.TabIndex = 2;
+            this.NamaLengkapTextBox.Location = new System.Drawing.Point(166, 67);
+            this.NamaLengkapTextBox.Name = "NamaLengkapTextBox";
+            this.NamaLengkapTextBox.Size = new System.Drawing.Size(242, 22);
+            this.NamaLengkapTextBox.TabIndex = 2;
             // 
-            // textBox2
+            // NIKTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(166, 101);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(242, 22);
-            this.textBox2.TabIndex = 4;
+            this.NIKTextBox.Location = new System.Drawing.Point(166, 101);
+            this.NIKTextBox.Name = "NIKTextBox";
+            this.NIKTextBox.Size = new System.Drawing.Size(242, 22);
+            this.NIKTextBox.TabIndex = 4;
             // 
-            // label2
+            // NIK
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 16);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "NIK (No. KTP)";
+            this.NIK.AutoSize = true;
+            this.NIK.Location = new System.Drawing.Point(26, 101);
+            this.NIK.Name = "NIK";
+            this.NIK.Size = new System.Drawing.Size(89, 16);
+            this.NIK.TabIndex = 3;
+            this.NIK.Text = "NIK (No. KTP)";
             // 
-            // textBox3
+            // TempatLahirTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(166, 173);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(242, 22);
-            this.textBox3.TabIndex = 6;
+            this.TempatLahirTextBox.Location = new System.Drawing.Point(166, 173);
+            this.TempatLahirTextBox.Name = "TempatLahirTextBox";
+            this.TempatLahirTextBox.Size = new System.Drawing.Size(242, 22);
+            this.TempatLahirTextBox.TabIndex = 6;
             // 
-            // label3
+            // TempatLahir
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 173);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Tempat Lahir";
+            this.TempatLahir.AutoSize = true;
+            this.TempatLahir.Location = new System.Drawing.Point(26, 173);
+            this.TempatLahir.Name = "TempatLahir";
+            this.TempatLahir.Size = new System.Drawing.Size(86, 16);
+            this.TempatLahir.TabIndex = 5;
+            this.TempatLahir.Text = "Tempat Lahir";
             // 
-            // label4
+            // TanggalLahir
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 137);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Tanggal Lahir";
+            this.TanggalLahir.AutoSize = true;
+            this.TanggalLahir.Location = new System.Drawing.Point(26, 137);
+            this.TanggalLahir.Name = "TanggalLahir";
+            this.TanggalLahir.Size = new System.Drawing.Size(90, 16);
+            this.TanggalLahir.TabIndex = 7;
+            this.TanggalLahir.Text = "Tanggal Lahir";
             // 
-            // dateTimePicker1
+            // TanggalLahirDateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(166, 137);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(242, 22);
-            this.dateTimePicker1.TabIndex = 8;
+            this.TanggalLahirDateTimePicker.Location = new System.Drawing.Point(166, 137);
+            this.TanggalLahirDateTimePicker.Name = "TanggalLahirDateTimePicker";
+            this.TanggalLahirDateTimePicker.Size = new System.Drawing.Size(242, 22);
+            this.TanggalLahirDateTimePicker.TabIndex = 8;
             // 
-            // textBox4
+            // PekerjaanTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(166, 253);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(242, 22);
-            this.textBox4.TabIndex = 10;
+            this.PekerjaanTextBox.Location = new System.Drawing.Point(166, 253);
+            this.PekerjaanTextBox.Name = "PekerjaanTextBox";
+            this.PekerjaanTextBox.Size = new System.Drawing.Size(242, 22);
+            this.PekerjaanTextBox.TabIndex = 10;
             // 
-            // label5
+            // Pekerjaan
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 253);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 16);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Pekerjaan";
+            this.Pekerjaan.AutoSize = true;
+            this.Pekerjaan.Location = new System.Drawing.Point(26, 253);
+            this.Pekerjaan.Name = "Pekerjaan";
+            this.Pekerjaan.Size = new System.Drawing.Size(69, 16);
+            this.Pekerjaan.TabIndex = 9;
+            this.Pekerjaan.Text = "Pekerjaan";
             // 
-            // label6
+            // JenisKelamin
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 214);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 16);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Jenis Kelamin";
+            this.JenisKelamin.AutoSize = true;
+            this.JenisKelamin.Location = new System.Drawing.Point(26, 214);
+            this.JenisKelamin.Name = "JenisKelamin";
+            this.JenisKelamin.Size = new System.Drawing.Size(90, 16);
+            this.JenisKelamin.TabIndex = 11;
+            this.JenisKelamin.Text = "Jenis Kelamin";
             // 
-            // radioButton1
+            // LakiLakiRadioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(166, 214);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(82, 20);
-            this.radioButton1.TabIndex = 12;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Laki-Laki";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.LakiLakiRadioButton.AutoSize = true;
+            this.LakiLakiRadioButton.Location = new System.Drawing.Point(166, 214);
+            this.LakiLakiRadioButton.Name = "LakiLakiRadioButton";
+            this.LakiLakiRadioButton.Size = new System.Drawing.Size(82, 20);
+            this.LakiLakiRadioButton.TabIndex = 12;
+            this.LakiLakiRadioButton.TabStop = true;
+            this.LakiLakiRadioButton.Text = "Laki-Laki";
+            this.LakiLakiRadioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // PerempuanRadioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(279, 214);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(98, 20);
-            this.radioButton2.TabIndex = 13;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Perempuan";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.PerempuanRadioButton.AutoSize = true;
+            this.PerempuanRadioButton.Location = new System.Drawing.Point(279, 214);
+            this.PerempuanRadioButton.Name = "PerempuanRadioButton";
+            this.PerempuanRadioButton.Size = new System.Drawing.Size(98, 20);
+            this.PerempuanRadioButton.TabIndex = 13;
+            this.PerempuanRadioButton.TabStop = true;
+            this.PerempuanRadioButton.Text = "Perempuan";
+            this.PerempuanRadioButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // SimpanDataPasien
             // 
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(166, 304);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 33);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Simpan Data Pasien";
-            this.button2.UseVisualStyleBackColor = true;
+            this.SimpanDataPasien.ForeColor = System.Drawing.Color.Black;
+            this.SimpanDataPasien.Location = new System.Drawing.Point(166, 304);
+            this.SimpanDataPasien.Name = "SimpanDataPasien";
+            this.SimpanDataPasien.Size = new System.Drawing.Size(164, 33);
+            this.SimpanDataPasien.TabIndex = 14;
+            this.SimpanDataPasien.Text = "Simpan Data Pasien";
+            this.SimpanDataPasien.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // CariDataPasienTextBox
             // 
-            this.textBox5.AccessibleName = "";
-            this.textBox5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox5.Location = new System.Drawing.Point(453, 354);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(150, 22);
-            this.textBox5.TabIndex = 15;
-            this.textBox5.Text = "Cari Data Pasien";
+            this.CariDataPasienTextBox.AccessibleName = "";
+            this.CariDataPasienTextBox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.CariDataPasienTextBox.Location = new System.Drawing.Point(453, 354);
+            this.CariDataPasienTextBox.Name = "CariDataPasienTextBox";
+            this.CariDataPasienTextBox.Size = new System.Drawing.Size(150, 22);
+            this.CariDataPasienTextBox.TabIndex = 15;
+            this.CariDataPasienTextBox.Text = "Cari Data Pasien";
+            this.CariDataPasienTextBox.GotFocus += new System.EventHandler(this.CariDataPasienTextBox_OnFocus);
+            this.CariDataPasienTextBox.LostFocus += new System.EventHandler(this.CariDataPasienTextBox_LoseFocus);
             // 
-            // dataGridView1
+            // ShowDataPasienDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(453, 67);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(379, 270);
-            this.dataGridView1.TabIndex = 16;
+            this.ShowDataPasienDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ShowDataPasienDataGridView.Location = new System.Drawing.Point(453, 67);
+            this.ShowDataPasienDataGridView.Name = "ShowDataPasienDataGridView";
+            this.ShowDataPasienDataGridView.RowHeadersWidth = 51;
+            this.ShowDataPasienDataGridView.RowTemplate.Height = 24;
+            this.ShowDataPasienDataGridView.Size = new System.Drawing.Size(379, 270);
+            this.ShowDataPasienDataGridView.TabIndex = 16;
             // 
-            // button3
+            // EditButton
             // 
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(672, 352);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(76, 27);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Edit";
-            this.button3.UseVisualStyleBackColor = true;
+            this.EditButton.ForeColor = System.Drawing.Color.Black;
+            this.EditButton.Location = new System.Drawing.Point(672, 352);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(76, 27);
+            this.EditButton.TabIndex = 17;
+            this.EditButton.Text = "Edit";
+            this.EditButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // HapusButton
             // 
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(754, 352);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(78, 27);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "Hapus";
-            this.button4.UseVisualStyleBackColor = true;
+            this.HapusButton.ForeColor = System.Drawing.Color.Black;
+            this.HapusButton.Location = new System.Drawing.Point(754, 352);
+            this.HapusButton.Name = "HapusButton";
+            this.HapusButton.Size = new System.Drawing.Size(78, 27);
+            this.HapusButton.TabIndex = 18;
+            this.HapusButton.Text = "Delete";
+            this.HapusButton.UseVisualStyleBackColor = true;
             // 
             // FormDataPasien
             // 
@@ -228,30 +230,31 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(878, 520);
             this.ControlBox = false;
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.HapusButton);
+            this.Controls.Add(this.EditButton);
+            this.Controls.Add(this.ShowDataPasienDataGridView);
+            this.Controls.Add(this.CariDataPasienTextBox);
+            this.Controls.Add(this.SimpanDataPasien);
+            this.Controls.Add(this.PerempuanRadioButton);
+            this.Controls.Add(this.LakiLakiRadioButton);
+            this.Controls.Add(this.JenisKelamin);
+            this.Controls.Add(this.PekerjaanTextBox);
+            this.Controls.Add(this.Pekerjaan);
+            this.Controls.Add(this.TanggalLahirDateTimePicker);
+            this.Controls.Add(this.TanggalLahir);
+            this.Controls.Add(this.TempatLahirTextBox);
+            this.Controls.Add(this.TempatLahir);
+            this.Controls.Add(this.NIKTextBox);
+            this.Controls.Add(this.NIK);
+            this.Controls.Add(this.NamaLengkapTextBox);
+            this.Controls.Add(this.NamaLengkap);
+            this.Controls.Add(this.KembaliButton);
             this.ForeColor = System.Drawing.Color.DimGray;
             this.Name = "FormDataPasien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form Data Pasien";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormDataPasien_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ShowDataPasienDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,24 +262,24 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button KembaliButton;
+        private System.Windows.Forms.Label NamaLengkap;
+        private System.Windows.Forms.TextBox NamaLengkapTextBox;
+        private System.Windows.Forms.TextBox NIKTextBox;
+        private System.Windows.Forms.Label NIK;
+        private System.Windows.Forms.TextBox TempatLahirTextBox;
+        private System.Windows.Forms.Label TempatLahir;
+        private System.Windows.Forms.Label TanggalLahir;
+        private System.Windows.Forms.DateTimePicker TanggalLahirDateTimePicker;
+        private System.Windows.Forms.TextBox PekerjaanTextBox;
+        private System.Windows.Forms.Label Pekerjaan;
+        private System.Windows.Forms.Label JenisKelamin;
+        private System.Windows.Forms.RadioButton LakiLakiRadioButton;
+        private System.Windows.Forms.RadioButton PerempuanRadioButton;
+        private System.Windows.Forms.Button SimpanDataPasien;
+        private System.Windows.Forms.TextBox CariDataPasienTextBox;
+        private System.Windows.Forms.DataGridView ShowDataPasienDataGridView;
+        private System.Windows.Forms.Button EditButton;
+        private System.Windows.Forms.Button HapusButton;
     }
 }
