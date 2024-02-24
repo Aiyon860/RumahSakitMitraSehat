@@ -37,8 +37,8 @@ namespace RumahSakitMitraSehat
         {
             // spesifikasi
             con.Open();
-            MySqlCommand commandDoctorType = new MySqlCommand("SELECT * FROM doctor_types;", con);
-            MySqlDataReader reader = commandDoctorType.ExecuteReader();
+            MySqlCommand command_type = new MySqlCommand("SELECT * FROM doctor_types;", con);
+            MySqlDataReader reader = command_type.ExecuteReader();
 
             while (reader.Read())
             {
@@ -48,38 +48,38 @@ namespace RumahSakitMitraSehat
 
             // doctor_list view
             con.Open();
-            MySqlCommand commandDoctorList = new MySqlCommand("SELECT * FROM doctor_list;", con);
-            MySqlDataReader dataReader = commandDoctorList.ExecuteReader();
+            MySqlCommand command_list = new MySqlCommand("SELECT * FROM doctor_list;", con);
+            MySqlDataReader dataReader = command_list.ExecuteReader();
             DataTable dataTable = new DataTable();
             dataTable.Load(dataReader);
             FilterDokterDataGridView.DataSource = dataTable;
             con.Close();
         }
 
-        private void Search_DoctorData(String keyword)
+        private void Search_Doctor(String keyword)
         {
             con.Open();
-            MySqlCommand dataSearchCommand = new MySqlCommand("SELECT * FROM doctor_list WHERE `Nama Lengkap` LIKE @keyword", con);
-            dataSearchCommand.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
-            MySqlDataReader dataReader = dataSearchCommand.ExecuteReader();
+            MySqlCommand dataCommand = new MySqlCommand("SELECT * FROM doctor_list WHERE `Nama Lengkap` LIKE @keyword", con);
+            dataCommand.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+            MySqlDataReader dataReader = dataCommand.ExecuteReader();
             DataTable dataTable = new DataTable();
             dataTable.Load(dataReader);
             FilterDokterDataGridView.DataSource = dataTable;
             con.Close();
         }
 
-        private void load_data_dokter()
+        private void Load_Doctor()
         {
             con.Open();
-            MySqlCommand dataSearchCommand = new MySqlCommand("SELECT * FROM doctor_list", con);
-            MySqlDataReader dataReader = dataSearchCommand.ExecuteReader();
+            MySqlCommand dataCommand = new MySqlCommand("SELECT * FROM doctor_list", con);
+            MySqlDataReader dataReader = dataCommand.ExecuteReader();
             DataTable dataTable = new DataTable();
             dataTable.Load(dataReader);
             FilterDokterDataGridView.DataSource = dataTable;
             con.Close();
         }
 
-        private void clear_form()
+        private void Clear_Form()
         {
             NamaLengkapTextBox.Text = "";
             NIKTextBox.Text = "";
@@ -93,13 +93,13 @@ namespace RumahSakitMitraSehat
 
         private void ResetButton_Click(object sender, EventArgs e)
         {
-            this.clear_form();
+            this.Clear_Form();
         }
 
         private void SimpanButton_Click(object sender, EventArgs e)
         {
             var nama_lengkap = NamaLengkapTextBox.Text;
-            var nik = NIKTextBox.Text;
+            var NIK = NIKTextBox.Text;
             var tgl_lahir = TanggalLahirDateTimePicker.Value.ToString("yyyy-MM-dd");
             var tmp_lahir = TempatLahirTextBox.Text;
             var gender = "";
@@ -114,67 +114,68 @@ namespace RumahSakitMitraSehat
             // get the highest id
             int highestID = 0;
             con.Open();
-            MySqlCommand cmd = new MySqlCommand("SELECT MAX(id) FROM doctors", con);
+            MySqlCommand cmd = new MySqlCommand("SELECT MAX(id) FROM doctor_list", con);
             highestID = Convert.ToInt32(cmd.ExecuteScalar());
             con.Close();
 
             con.Open();
-            MySqlCommand dataSearchCommand;
+            MySqlCommand dataCommand;
             if (NotVisibleTextBox.Text == "")
             {
-                dataSearchCommand = new MySqlCommand
+                dataCommand = new MySqlCommand
                 (
                     $"INSERT INTO doctors (id, fullname, NIK, birth_date, birth_place, gender, type_id) " +
-                    $"VALUES (@id, @fullname, @nik, @birth_date, @birth_place, @gender,@type_id)", con
+                    $"VALUES (@id, @fullname, @NIK, @birth_date, @birth_place, @gender,@type_id)", con
                 );
-                dataSearchCommand.Parameters.AddWithValue("@id", highestID + 1);
+                dataCommand.Parameters.AddWithValue("@id", highestID + 1);
             }
             else
             {
-                dataSearchCommand = new MySqlCommand
+                dataCommand = new MySqlCommand
                     (
                         "UPDATE doctors " +
                             "SET fullname = @fullname, " +
-                            "nik = @nik, " +
+                            "NIK = @NIK, " +
                             "birth_date = @birth_date, " +
                             "birth_place = @birth_place, " +
                             "gender = @gender," +
                             "type_id = @type_id " +
                         "WHERE id = @id", con
                     );
-              dataSearchCommand.Parameters.AddWithValue("@id", NotVisibleTextBox.Text);
+              dataCommand.Parameters.AddWithValue("@id", Int16.Parse(NotVisibleTextBox.Text));
             }
 
-            dataSearchCommand.Parameters.AddWithValue("@fullname", nama_lengkap);
-            dataSearchCommand.Parameters.AddWithValue("@NIK", nik);
-            dataSearchCommand.Parameters.AddWithValue("@birth_date", tgl_lahir);
-            dataSearchCommand.Parameters.AddWithValue("@birth_place", tmp_lahir);
-            dataSearchCommand.Parameters.AddWithValue("@gender", gender);
-            dataSearchCommand.Parameters.AddWithValue("@type_id", spesialisasi_components[0]);
+            dataCommand.Parameters.AddWithValue("@fullname", nama_lengkap);
+            dataCommand.Parameters.AddWithValue("@NIK", NIK);
+            dataCommand.Parameters.AddWithValue("@birth_date", tgl_lahir);
+            dataCommand.Parameters.AddWithValue("@birth_place", tmp_lahir);
+            dataCommand.Parameters.AddWithValue("@gender", gender);
+            dataCommand.Parameters.AddWithValue("@type_id", spesialisasi_components[0]);
            
-            int affected_rows = dataSearchCommand.ExecuteNonQuery();
+            int affected_rows = dataCommand.ExecuteNonQuery();
             if (affected_rows > 0)
             {
                 MessageBox.Show
-                    (
+                (
                         "Berhasil menyimpan data", 
                         "Informasi",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information
-                    );
+                );
+                this.Text = "Form Data Dokter";
             }
 
             con.Close();
-            this.clear_form();
-            this.load_data_dokter();
+            this.Clear_Form();
+            this.Load_Doctor();
         }
 
         private void load_single_dokter(int doctor_id)
         {
             con.Open();
-            MySqlCommand dataSearchCommand = new MySqlCommand("SELECT * FROM doctors WHERE id = @id", con);
-            dataSearchCommand.Parameters.AddWithValue("@id", doctor_id);
-            MySqlDataReader dataReader = dataSearchCommand.ExecuteReader();
+            MySqlCommand dataCommand = new MySqlCommand("SELECT * FROM doctors WHERE id = @id", con);
+            dataCommand.Parameters.AddWithValue("@id", doctor_id);
+            MySqlDataReader dataReader = dataCommand.ExecuteReader();
 
             if (dataReader.HasRows == true)
             {
@@ -220,7 +221,7 @@ namespace RumahSakitMitraSehat
             con.Close();
         }
 
-        private void drop_single_dokter(int doctor_id)
+        private void Drop_Single_Doctor(int doctor_id)
         {
             con.Open();
             MySqlCommand dataCommand = new MySqlCommand("DELETE FROM doctors WHERE id = @id", con);
@@ -258,8 +259,8 @@ namespace RumahSakitMitraSehat
             {
                 var rowIndex = FilterDokterDataGridView.CurrentCell.RowIndex;
                 var doctor_id = FilterDokterDataGridView.Rows[rowIndex].Cells[0].Value.ToString();
-                this.drop_single_dokter(Int16.Parse(doctor_id));
-                this.load_data_dokter();
+                this.Drop_Single_Doctor(Int16.Parse(doctor_id));
+                this.Load_Doctor();
             }
         }
 
@@ -269,16 +270,9 @@ namespace RumahSakitMitraSehat
             {
                 return;
             }
-            this.Search_DoctorData(this.FilterDokterTextBox.Text);
+            this.Search_Doctor(this.FilterDokterTextBox.Text);
         }
 
-        private void KembaliButton_Click(object sender, EventArgs e)
-        {
-            this.RumahSakitMitraSehat = new RumahSakitMitraSehat();
-            RumahSakitMitraSehat.Show();
-            this.Close();
-        }
-        
         private void FilterDokterTextBox_OnFocus(object sender, EventArgs e)
         {
             if (this.FilterDokterTextBox.Text != "" 
@@ -300,8 +294,8 @@ namespace RumahSakitMitraSehat
                 
                 // displaying all data when box is empty
                 con.Open();
-                MySqlCommand commandDoctorList = new MySqlCommand("SELECT * FROM doctor_list;", con);
-                MySqlDataReader dataReader = commandDoctorList.ExecuteReader();
+                MySqlCommand command_list = new MySqlCommand("SELECT * FROM doctor_list;", con);
+                MySqlDataReader dataReader = command_list.ExecuteReader();
                 DataTable dataTable = new DataTable();
                 dataTable.Load(dataReader);
                 FilterDokterDataGridView.DataSource = dataTable;
@@ -311,6 +305,10 @@ namespace RumahSakitMitraSehat
 
         private void EditButton_Click(object sender, EventArgs e)
         {
+            // indicate that user in data editing process
+            this.Text = "Form Data Dokter (Editing)";
+
+            // select the specific 'id' based on row
             var rowIndex = FilterDokterDataGridView.CurrentCell.RowIndex;
             var doctor_id = FilterDokterDataGridView.Rows[rowIndex].Cells[0].Value.ToString();
             NotVisibleTextBox.Text = doctor_id;
@@ -327,5 +325,11 @@ namespace RumahSakitMitraSehat
             this.SpesialisasiComboBox.Text = "Spesialisasi";
         }
 
+        private void KembaliButton_Click(object sender, EventArgs e)
+        {
+            RumahSakitMitraSehat = new RumahSakitMitraSehat();
+            RumahSakitMitraSehat.Show();
+            this.Close();
+        }
     }
 }

@@ -7,7 +7,7 @@ CREATE TABLE medicines
     `price` INT NOT NULL
 );
 
-SELECT * FROM medicines;
+SELECT * FROM medicines;doctors
 
 CREATE VIEW `medicine_list` AS
 SELECT
@@ -30,3 +30,7 @@ VALUES (1, 'Paracetamol', 'Fever and Pain', 100, 10000),
 	   (8, 'Metformin', 'Type 2 Diabetes', 70, 18000),
 	   (9, 'Atorvastatin', 'High Cholesterol', 55, 30000),
 	   (10, 'Losartan', 'Hypertension', 65, 22000);
+
+UPDATE medicines  
+SET indication = "test"
+WHERE id = 11;
