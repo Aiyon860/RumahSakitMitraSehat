@@ -9,7 +9,7 @@ CREATE TABLE `patients`
     `occupation` VARCHAR(30)
 );
 
-SELECT * FROM `patients`;
+SELECT * FROM `patients`doctor_list;
 
 CREATE VIEW `patient_list` AS
 SELECT
@@ -22,6 +22,9 @@ SELECT
     occupation AS `Pekerjaan`
 FROM
 	patients;
+
+ALTER TABLE `patients`
+MODIFY COLUMN NIK BIGINT;
     
 INSERT INTO `patients` (id, fullname, NIK, birth_date, birth_place, gender, occupation) 
 VALUES (1, 'John Doe', 123456789, '1990-05-15', 'New York', 'M', 'Software Engineer'),

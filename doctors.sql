@@ -19,6 +19,9 @@ ADD `birth_place` VARCHAR(50) NOT NULL AFTER `birth_date`,
 ADD `sex` ENUM('M','F') NOT NULL AFTER `birth_place`;
 
 ALTER TABLE `doctors`
+MODIFY COLUMN `NIK` BIGINT;
+
+ALTER TABLE `doctors`
 RENAME COLUMN `sex` to `gender`;
 
 ALTER TABLE `doctors`
