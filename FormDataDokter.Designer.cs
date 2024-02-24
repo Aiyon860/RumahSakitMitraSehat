@@ -49,42 +49,51 @@ namespace RumahSakitMitraSehat
             this.NamaLengkapLabel = new System.Windows.Forms.Label();
             this.KembaliButton = new System.Windows.Forms.Button();
             this.SpesialisasiComboBox = new System.Windows.Forms.ComboBox();
+            this.ResetButton = new System.Windows.Forms.Button();
+            this.CariButton = new System.Windows.Forms.Button();
+            this.NotVisibleTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.FilterDokterDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // HapusButton
             // 
             this.HapusButton.ForeColor = System.Drawing.Color.Black;
-            this.HapusButton.Location = new System.Drawing.Point(754, 352);
+            this.HapusButton.Location = new System.Drawing.Point(888, 354);
             this.HapusButton.Name = "HapusButton";
             this.HapusButton.Size = new System.Drawing.Size(78, 27);
             this.HapusButton.TabIndex = 37;
             this.HapusButton.Text = "Delete";
             this.HapusButton.UseVisualStyleBackColor = true;
+            this.HapusButton.Click += new System.EventHandler(this.HapusButton_Click);
             // 
             // EditButton
             // 
             this.EditButton.ForeColor = System.Drawing.Color.Black;
-            this.EditButton.Location = new System.Drawing.Point(672, 352);
+            this.EditButton.Location = new System.Drawing.Point(806, 354);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(76, 27);
             this.EditButton.TabIndex = 36;
             this.EditButton.Text = "Edit";
             this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // FilterDokterDataGridView
             // 
+            this.FilterDokterDataGridView.AllowUserToAddRows = false;
+            this.FilterDokterDataGridView.AllowUserToDeleteRows = false;
             this.FilterDokterDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FilterDokterDataGridView.Location = new System.Drawing.Point(453, 67);
+            this.FilterDokterDataGridView.MultiSelect = false;
             this.FilterDokterDataGridView.Name = "FilterDokterDataGridView";
+            this.FilterDokterDataGridView.ReadOnly = true;
             this.FilterDokterDataGridView.RowHeadersWidth = 51;
             this.FilterDokterDataGridView.RowTemplate.Height = 24;
-            this.FilterDokterDataGridView.Size = new System.Drawing.Size(379, 270);
+            this.FilterDokterDataGridView.Size = new System.Drawing.Size(513, 270);
             this.FilterDokterDataGridView.TabIndex = 35;
             // 
             // FilterDokterTextBox
             // 
-            this.FilterDokterTextBox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.FilterDokterTextBox.ForeColor = System.Drawing.Color.Gray;
             this.FilterDokterTextBox.Location = new System.Drawing.Point(453, 354);
             this.FilterDokterTextBox.Name = "FilterDokterTextBox";
             this.FilterDokterTextBox.Size = new System.Drawing.Size(150, 22);
@@ -98,10 +107,11 @@ namespace RumahSakitMitraSehat
             this.SimpanButton.ForeColor = System.Drawing.Color.Black;
             this.SimpanButton.Location = new System.Drawing.Point(166, 304);
             this.SimpanButton.Name = "SimpanButton";
-            this.SimpanButton.Size = new System.Drawing.Size(128, 33);
+            this.SimpanButton.Size = new System.Drawing.Size(135, 38);
             this.SimpanButton.TabIndex = 33;
             this.SimpanButton.Text = "Simpan";
             this.SimpanButton.UseVisualStyleBackColor = true;
+            this.SimpanButton.Click += new System.EventHandler(this.SimpanButton_Click);
             // 
             // PerempuanRadioButton
             // 
@@ -178,6 +188,7 @@ namespace RumahSakitMitraSehat
             // NIKTextBox
             // 
             this.NIKTextBox.Location = new System.Drawing.Point(166, 101);
+            this.NIKTextBox.MaxLength = 16;
             this.NIKTextBox.Name = "NIKTextBox";
             this.NIKTextBox.Size = new System.Drawing.Size(242, 22);
             this.NIKTextBox.TabIndex = 23;
@@ -219,6 +230,7 @@ namespace RumahSakitMitraSehat
             // 
             // SpesialisasiComboBox
             // 
+            this.SpesialisasiComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SpesialisasiComboBox.ForeColor = System.Drawing.SystemColors.GrayText;
             this.SpesialisasiComboBox.FormattingEnabled = true;
             this.SpesialisasiComboBox.Location = new System.Drawing.Point(166, 253);
@@ -226,16 +238,47 @@ namespace RumahSakitMitraSehat
             this.SpesialisasiComboBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.SpesialisasiComboBox.Size = new System.Drawing.Size(242, 24);
             this.SpesialisasiComboBox.TabIndex = 38;
-            this.SpesialisasiComboBox.Text = "Spesialisasi";
             this.SpesialisasiComboBox.GotFocus += new System.EventHandler(this.SpesialisasiComboBox_OnFocus);
             this.SpesialisasiComboBox.LostFocus += new System.EventHandler(this.SpesialisasiComboBox_LoseFocus);
+            // 
+            // ResetButton
+            // 
+            this.ResetButton.Location = new System.Drawing.Point(323, 308);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(85, 30);
+            this.ResetButton.TabIndex = 39;
+            this.ResetButton.Text = "Reset";
+            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
+            // 
+            // CariButton
+            // 
+            this.CariButton.ForeColor = System.Drawing.Color.Black;
+            this.CariButton.Location = new System.Drawing.Point(609, 352);
+            this.CariButton.Name = "CariButton";
+            this.CariButton.Size = new System.Drawing.Size(76, 27);
+            this.CariButton.TabIndex = 40;
+            this.CariButton.Text = "Cari";
+            this.CariButton.UseVisualStyleBackColor = true;
+            this.CariButton.Click += new System.EventHandler(this.CariButton_Click);
+            // 
+            // NotVisibleTextBox
+            // 
+            this.NotVisibleTextBox.Location = new System.Drawing.Point(279, 23);
+            this.NotVisibleTextBox.Name = "NotVisibleTextBox";
+            this.NotVisibleTextBox.Size = new System.Drawing.Size(129, 22);
+            this.NotVisibleTextBox.TabIndex = 41;
+            this.NotVisibleTextBox.Visible = false;
             // 
             // FormDataDokter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 520);
+            this.ClientSize = new System.Drawing.Size(1005, 520);
             this.ControlBox = false;
+            this.Controls.Add(this.NotVisibleTextBox);
+            this.Controls.Add(this.CariButton);
+            this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.SpesialisasiComboBox);
             this.Controls.Add(this.HapusButton);
             this.Controls.Add(this.EditButton);
@@ -255,6 +298,7 @@ namespace RumahSakitMitraSehat
             this.Controls.Add(this.NamaLengkapTextBox);
             this.Controls.Add(this.NamaLengkapLabel);
             this.Controls.Add(this.KembaliButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormDataDokter";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -287,5 +331,8 @@ namespace RumahSakitMitraSehat
         private System.Windows.Forms.Label NamaLengkapLabel;
         private System.Windows.Forms.Button KembaliButton;
         private System.Windows.Forms.ComboBox SpesialisasiComboBox;
+        private System.Windows.Forms.Button ResetButton;
+        private System.Windows.Forms.Button CariButton;
+        private System.Windows.Forms.TextBox NotVisibleTextBox;
     }
 }
